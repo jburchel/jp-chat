@@ -1,0 +1,3 @@
+mkdir joshua-project-chat
+cd joshua-project-chat
+npx create-react-app . 

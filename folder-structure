@@ -1,0 +1,15 @@
+joshua-project-chat/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Chat/
+│   │   ├── Header/
+│   │   └── Loading/
+│   ├── pages/
+│   │   └── Home/
+│   ├── api/
+│   │   ├── joshuaProject.js
+│   │   └── gemini.js
+│   ├── styles/
+│   │   └── global.css
+│   └── utils/ 
