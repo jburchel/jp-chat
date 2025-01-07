@@ -1,15 +1,24 @@
 import axios from 'axios';
+import config from '../config/config';
 
-const BASE_URL = 'https://joshuaproject.net/api/v2';
+const BASE_URL = config.JOSHUA_PROJECT_BASE_URL;
+
+// Add CORS headers in the request
+const axiosInstance = axios.create({
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  }
+});
 
 // @docs - Using Joshua Project API v2
 const joshuaProjectApi = {
   // Get people groups
   getPeopleGroups: async (params = {}) => {
     try {
-      const response = await axios.get(`${BASE_URL}/people_groups`, {
+      const response = await axiosInstance.get(`${BASE_URL}/people_groups`, {
         params: {
-          api_key: process.env.REACT_APP_JOSHUA_PROJECT_API_KEY,
+          api_key: config.JOSHUA_PROJECT_API_KEY,
           ...params
         }
       });
@@ -23,9 +32,9 @@ const joshuaProjectApi = {
   // Get languages
   getLanguages: async (params = {}) => {
     try {
-      const response = await axios.get(`${BASE_URL}/languages`, {
+      const response = await axiosInstance.get(`${BASE_URL}/languages`, {
         params: {
-          api_key: process.env.REACT_APP_JOSHUA_PROJECT_API_KEY,
+          api_key: config.JOSHUA_PROJECT_API_KEY,
           ...params
         }
       });
@@ -39,9 +48,9 @@ const joshuaProjectApi = {
   // Get countries
   getCountries: async (params = {}) => {
     try {
-      const response = await axios.get(`${BASE_URL}/countries`, {
+      const response = await axiosInstance.get(`${BASE_URL}/countries`, {
         params: {
-          api_key: process.env.REACT_APP_JOSHUA_PROJECT_API_KEY,
+          api_key: config.JOSHUA_PROJECT_API_KEY,
           ...params
         }
       });

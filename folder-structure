@@ -10,6 +10,8 @@ joshua-project-chat/
 │   ├── api/
 │   │   ├── joshuaProject.js
 │   │   └── gemini.js
+│   ├── config/
+│   │   └── config.js
 │   ├── styles/
 │   │   └── global.css
 │   └── utils/ 

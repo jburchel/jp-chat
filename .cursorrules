@@ -1,0 +1,27 @@
+## Application Overview
+
+This application is a web chat application that will utilize the Gemini 2.0 AI model to help users access information from the Joshua Project API and database by simply inputting a question in the chat.
+
+## 
+
+## Technologies Used
+
+- github pages for deployment
+- html, css, javascript, and react for the frontend
+- node.js, express, and axios for the backend
+- gemini 2.0 for the ai model
+- joshua project api and database for the data
+- nono of the above if they don't work with deployment via github pages
+
+## Rules
+
+- all new components should be added to the components folder
+- all new pages should be added to the pages folder
+- all new routes should be added to the routes folder
+- all new api calls should be added to the api folder
+- all new styles should be added to the styles folder
+
+## Joshua Project API and Database
+
+- All chats and composer entries should reference the joshua project docs by using the @docs tag in the chat.
+- Joshua Project API will be in the .env file along with any other API information needed for the application.
